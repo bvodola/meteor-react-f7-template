@@ -1,9 +1,13 @@
 import React from 'react';
+import {Page, ContentBlock, Navbar} from 'framework7-react';
 
 const Home = () => (
-	<div>
-    Home Component
-  </div>
+	<Page>
+		<Navbar title="Home" backLink="Back" sliding />
+		<ContentBlock inner>
+    	Home Component Fodelão
+		</ContentBlock>
+  </Page>
 );
 
 export default Home;

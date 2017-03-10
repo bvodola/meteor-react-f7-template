@@ -8,14 +8,26 @@ import {
 // import Loading from './layouts/LoadingLayout.jsx';
 // import Main from './layouts/MainLayout.jsx';
 import HomeContainer from './containers/HomeContainer.jsx';
+import About from './components/About.jsx';
+import Home from './components/Home.jsx';
 
 // =================
 // Routes Definition
 // =================
-const Routes = [{
+const Routes = [
+	{
     path: '/home/',
+    component: Home
+	},
+	{
+    path: '/home-container/',
     component: HomeContainer
-}];
+	},
+	{
+		path: '/about/',
+		component: About
+	}
+];
 
 // =============
 // F7 Components
@@ -118,7 +130,8 @@ const MainViews = (props, context) => {
 						<ContentBlockTitle>Navigation</ContentBlockTitle>
 						<List>
 							<ListItem link="/about/" title="About"></ListItem>
-							<ListItem link="/form/" title="Form"></ListItem>
+							<ListItem link="/home/" title="Home"></ListItem>
+							<ListItem link="/home-container/" title="Home Container"></ListItem>
 						</List>
 						<ContentBlockTitle>Side Panels</ContentBlockTitle>
 						<ContentBlock>
@@ -204,16 +217,14 @@ const AppLoginScreen = () => (
 class App extends Component {
 	render() {
 		return (
-			<div id="root">
-				<Framework7App themeType="material" routes={Routes} root="#root">
-					<Statusbar />
-					<LeftPanel />
-					<RightPanel />
-					<MainViews />
-					<AppPopup />
-					<AppLoginScreen />
-				</Framework7App>
-			</div>
+			<Framework7App themeType="material" routes={Routes} pushState={true} pushStateSeparator="">
+				<Statusbar />
+				<LeftPanel />
+				<RightPanel />
+				<MainViews />
+				<AppPopup />
+				<AppLoginScreen />
+			</Framework7App>
 		);
 	}
 }
