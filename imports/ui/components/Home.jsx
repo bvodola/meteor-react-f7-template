@@ -5,7 +5,7 @@ const Home = () => (
 	<Page>
 		<Navbar title="Home" backLink="Back" sliding />
 		<ContentBlock inner>
-    	Home Component Fodelão
+    	Home Component
 		</ContentBlock>
   </Page>
 );
