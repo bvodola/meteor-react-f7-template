@@ -217,7 +217,14 @@ const AppLoginScreen = () => (
 class App extends Component {
 	render() {
 		return (
-			<Framework7App themeType="material" routes={Routes} pushState={true} pushStateSeparator="">
+			<Framework7App
+				themeType="material"
+				routes={Routes}
+				pushState={true}
+				pushStateSeparator=""
+				swipePanel="both"
+				swipePanelActiveArea="50"
+				>
 				<Statusbar />
 				<LeftPanel />
 				<RightPanel />
