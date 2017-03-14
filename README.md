@@ -1,4 +1,4 @@
-# meteor-react-f7-skel
+# meteor-react-f7-template
 
 This is a template for meteor+react+f7 apps.
 It comes with Hot Module Replacement by default.
